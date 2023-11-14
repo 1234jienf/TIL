@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 함수
+        // 자바스크립트에서는 두 가지 방식으로 선언이 가능함
+        // 1.1 함수 선언식
+        // 이 때 까지 쓴 방식과 비슷한 방식
+        function func(param1,param2) {
+            console.log(`함수 선언식 = ${param1}, ${param2}`)
+        }
+        func(1,2)
+
+        // 1.2. 함수 표현식
+        // 함수의 이름은 일반적으로 잘 안쓴다! (익명 함수로)
+        const myfunc= function (param1,param2) {
+            console.log(`함수 선언식 = ${param1}, ${param2}`)
+        }
+
+        myfunc(1,2)
+
+        // 두 방식의 차이점 - 호이스팅 여부
+        // 번역하면 끌어올린다
+        // == 변수와 함수 선언이 코드 상단으로 옮겨지는 것처럼
+        // 보이는 현상
+
+        // 아래 코드가 버그가 나지 않는 이유는
+        // var 가 호이스팅이 발생하기 때문이다
+        console.log(x)
+        var x = 5
+        console.log(x)
+
+        // 1.3. 매개변수의 기본값 설정
+        const myfunc2 = function (param1=10, param2=20) {
+            console.log(`${param1}, ${param2}`)
+        }
+
+        myfunc2()
+        myfunc2(1)
+        myfunc2(1,2)
+        
+    </script>
+</body>
+</html>
